@@ -59,12 +59,13 @@
 // Here’s a table showing the methods on Name and RelatedName and what they
 // return for the various kinds of name, including the zero value (in the first column).
 //
-//	String()	""	"Baen Books"	"Dave Freer"	"James Tiptree Jr."
+//	Common()	""	"Baen Books"	"Dave Freer"	"James Tiptree Jr."
 //	FileAs()	""	"Baen Books"	"Freer, Dave"	"Tiptree, James Jr."
 //	Surname()	""	"Baen Books"	"Freer"		"Tiptree"
 //	Forename()	""	""		"Dave"		"James"
 //	Generation()	""	""		""		"Jr."
 //	NumParts()	0	1		2		3
+//	String()	""	"Baen Books"	"Dave Freer"	"James Tiptree Jr."
 //
 //
 // Limitations
@@ -184,7 +185,7 @@ func NewName3(forename, surname, generation string) (Name, error) {
 }
 
 // Common returns the common (as opposed to file-as) form of a name.  For a
-// zero-valued Name, it returns "".  It implements the fmt.Stringer interface.
+// zero-valued Name, it returns "".
 func (n Name) Common() string { return n.text }
 
 // FileAs returns the ‘file-as form’ of a name (eg., "Drake, David" rather than
