@@ -91,6 +91,11 @@ package relname
 //	\  ( Sr\. | \Jr. | (?: (?: L?X{0,3}) (?: I[XV] | V?I{0,3} ) ) ) $
 // (with all but one space removed) might be useful here.
 
+//
+// By the way, the authors whose names are used in comments in this file are
+// all highly recommended.
+//
+
 import (
 	"fmt"
 	"regexp"
